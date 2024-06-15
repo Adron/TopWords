@@ -29,5 +29,6 @@ public class Tests
                 "nights, scraps on Saturdays, lentils on Fridays, and a pigeon or so extra",
                 "on Sundays, made away with three-quarters of his income."
             ])), Is.EqualTo(new List<string> { "a", "of", "on" }));
+        Assert.That(TopTrioWords.TopTrio("e e e e   aa aA Aa, bb cc cC e e e"), Is.EqualTo(new List<string> { "e", "aa", "cc" }));
     }
 }
