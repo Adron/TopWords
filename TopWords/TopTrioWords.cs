@@ -4,7 +4,7 @@ namespace TopWords;
 
 public static class TopTrioWords
 {
-    public static string[] TopTrio(string s)
+    public static List<string> TopTrio(string s)
     {
         return Regex.Matches(s.ToLower(), @"[a-z']+")
             .Select(m => m.Value)
@@ -14,6 +14,6 @@ public static class TopTrioWords
             .ThenBy(g => g.Key)
             .Take(3)
             .Select(g => g.Key)
-            .ToArray();
+            .ToList();
     }
 }
