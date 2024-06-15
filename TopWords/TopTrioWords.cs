@@ -4,10 +4,9 @@ namespace TopWords;
 
 public static class TopTrioWords
 {
-    public static string[] Top3(string s)
+    public static string[] TopTrio(string s)
     {
         return Regex.Matches(s.ToLower(), @"[a-z']+")
-            .Cast<Match>()
             .Select(m => m.Value)
             .Where(word => !Regex.IsMatch(word, "^'+$"))
             .GroupBy(word => word)

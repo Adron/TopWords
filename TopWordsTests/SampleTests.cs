@@ -13,14 +13,14 @@ public class Tests
     [Test]
     public void SampleTests()
     {
-        Assert.That(TopTrioWords.Top3("a a a b c c d d d d e e e e e"), Is.EqualTo(new List<string> { "e", "d", "a" }));
-        Assert.That(TopTrioWords.Top3("e e e e DDD ddd DdD: ddd ddd aa aA Aa, bb cc cC e e e"), Is.EqualTo(new List<string> { "e", "ddd", "aa" }));
-        Assert.That(TopTrioWords.Top3(" //wont won't won't "), Is.EqualTo(new List<string> { "won't", "wont" }));
-        Assert.That(TopTrioWords.Top3(" , e .. "), Is.EqualTo(new List<string> { "e" }));
-        Assert.That(TopTrioWords.Top3(" ... "), Is.EqualTo(new List<string>()));
-        Assert.That(TopTrioWords.Top3(" ' "), Is.EqualTo(new List<string>()));
-        Assert.That(TopTrioWords.Top3(" ''' "), Is.EqualTo(new List<string>()));
-        Assert.That(TopTrioWords.Top3(
+        Assert.That(TopTrioWords.TopTrio("a a a b c c d d d d e e e e e"), Is.EqualTo(new List<string> { "e", "d", "a" }));
+        Assert.That(TopTrioWords.TopTrio("e e e e DDD ddd DdD: ddd ddd aa aA Aa, bb cc cC e e e"), Is.EqualTo(new List<string> { "e", "ddd", "aa" }));
+        Assert.That(TopTrioWords.TopTrio(" //wont won't won't "), Is.EqualTo(new List<string> { "won't", "wont" }));
+        Assert.That(TopTrioWords.TopTrio(" , e .. "), Is.EqualTo(new List<string> { "e" }));
+        Assert.That(TopTrioWords.TopTrio(" ... "), Is.EqualTo(new List<string>()));
+        Assert.That(TopTrioWords.TopTrio(" ' "), Is.EqualTo(new List<string>()));
+        Assert.That(TopTrioWords.TopTrio(" ''' "), Is.EqualTo(new List<string>()));
+        Assert.That(TopTrioWords.TopTrio(
             string.Join("\n", [
                 "In a village of La Mancha, the name of which I have no desire to call to",
                 "mind, there lived not long since one of those gentlemen that keep a lance",
